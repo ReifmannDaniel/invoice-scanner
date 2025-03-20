@@ -39,7 +39,7 @@ public class PdfScannerService {
      * @return Kompletter Textinhalt des PDFs
      * @throws IOException bei Netzwerk- oder Lesefehlern
      */
-    private String downloadPdfAsText(String url) throws IOException {
+    protected String downloadPdfAsText(String url) throws IOException {
         URI uri = URI.create(url);
         try (InputStream is = uri.toURL().openStream();
              BufferedInputStream bis = new BufferedInputStream(is);
